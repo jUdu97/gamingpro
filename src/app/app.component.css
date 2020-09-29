@@ -1,3 +1,58 @@
 div {
   text-align: center;
 }
+
+#gamepadicon,
+#trophyicon,
+#headseticon {
+  color: #8c1510;
+  z-index: -1;
+  position: absolute;
+}
+#gamepadicon {
+  top: 50px;
+  left: 210px;
+}
+#trophyicon {
+  top: 50px;
+  right: 215px;
+}
+#headseticon {
+  bottom: 150px;
+  right: 115px;
+}
+h1,
+h3 {
+  font-family: "Orbitron";
+  font-style: normal;
+}
+h1 {
+  font-weight: bolder;
+}
+h3 {
+  font-weight: lighter;
+}
+.login {
+  background-color: #e61c15;
+  color: #fff;
+}
+label {
+  color: #261817;
+  font-weight: 200;
+  font-family: "Manuale", serif;
+}
+.passhelp,
+.namehelp {
+  color: #450806;
+  font-family: "Petrona", serif;
+}
+.passhelp:hover,
+.namehelp:hover {
+  font-weight: bold;
+}
+footer {
+  font-family: "Roboto Slab", serif;
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+}
