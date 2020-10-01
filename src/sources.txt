@@ -1,3 +1,9 @@
 https://www.positronx.io/angular-material-design-buttons-tutorial-with-example/
 
 https://codesandbox.io/s/32v2y5538m
+
+https://stackoverflow.com/questions/57156449/unexpected-value-formbuilder-imported-by-the-module-appmodule-please-add-a
+
+https://stackoverflow.com/questions/43937387/if-selector-is-an-angular-component-then-verify-that-it-is-part-of-this-mod
+
+https://typescript.programmingpedia.net/en/knowledge-base/39657332/can-t-bind-to-formgroup-since-it-isn-t-a-known-property-of--form---formsmodule--reactiveformsmodule-loaded-

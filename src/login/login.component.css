@@ -1,0 +1,26 @@
+.login {
+  background-color: #e61c15;
+  color: #fff;
+}
+label {
+  color: #261817;
+  font-weight: 200;
+  font-family: "Manuale", serif;
+}
+.passhelp,
+.namehelp {
+  color: #450806;
+  font-family: "Petrona", serif;
+}
+.passhelp:hover,
+.namehelp:hover {
+  font-weight: bold;
+}
+.ng-valid[required],
+.ng-valid.required {
+  border-left: 5px solid #42a948; /* green */
+}
+
+.ng-invalid:not(form) {
+  border-left: 5px solid #a94442; /* red */
+}

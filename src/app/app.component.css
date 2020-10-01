@@ -32,24 +32,7 @@ h1 {
 h3 {
   font-weight: lighter;
 }
-.login {
-  background-color: #e61c15;
-  color: #fff;
-}
-label {
-  color: #261817;
-  font-weight: 200;
-  font-family: "Manuale", serif;
-}
-.passhelp,
-.namehelp {
-  color: #450806;
-  font-family: "Petrona", serif;
-}
-.passhelp:hover,
-.namehelp:hover {
-  font-weight: bold;
-}
+
 footer {
   font-family: "Roboto Slab", serif;
   position: absolute;
