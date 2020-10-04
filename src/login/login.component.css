@@ -2,6 +2,10 @@
   background-color: #e61c15;
   color: #fff;
 }
+.reset {
+  background-color: #ffffff;
+  color: #e61c15;
+}
 label {
   color: #261817;
   font-weight: 200;
@@ -18,9 +22,9 @@ label {
 }
 .ng-valid[required],
 .ng-valid.required {
-  border-left: 5px solid #42a948; /* green */
+  border-left: 7px solid #42a948;
 }
 
 .ng-invalid:not(form) {
-  border-left: 5px solid #a94442; /* red */
+  border-left: 7px solid #a94442;
 }

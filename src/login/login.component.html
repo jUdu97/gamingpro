@@ -1,21 +1,31 @@
-<form [formGroup]="gameForm" (ngSubmit)="onSubmit()">
-  <label for="username">Username: </label>
-  <input type="text" formControlName="username" />
-  <br /><br />
+<form
+  [formGroup]="gameForm"
+  novalidate
+  *ngIf="gameForm"
+  (ngSubmit)="onSubmit()"
+>
+  <div class="form-group">
+    <label for="username">Username: </label>
+    <input
+      type="text"
+      class="form-control required"
+      formControlName="username"
+      [class.is-invalid]="(gameForm.get('username').touched || gameForm.get('username').dirty)"
+    />
+    <span
+      *ngIf="(gameForm.get('username').touched || gameForm.get('username').dirty)"
+      class="invalid-feedback"
+    >
+      user required!
+    </span>
 
-  <label for="password">Password: </label>
-  <input type="text" formControlName="password" />
-  <br /><br />
+    <br /><br />
+    <!-- <button type="reset" mat-raised-button class="reset">
+    Reset
+  </button> -->
+    <button type="submit" mat-raised-button class="login">Log In</button>
 
-  <button
-    type="submit"
-    mat-raised-button
-    class="login"
-    [disabled]="!gameForm.valid"
-  >
-    Log In
-  </button>
-
-  <p class="passhelp">Forgot Password?</p>
-  <p class="namehelp">Forget Username?</p>
+    <p class="passhelp">Forgot Password?</p>
+    <p class="namehelp">Forget Username?</p>
+  </div>
 </form>

@@ -7,3 +7,9 @@ https://stackoverflow.com/questions/57156449/unexpected-value-formbuilder-import
 https://stackoverflow.com/questions/43937387/if-selector-is-an-angular-component-then-verify-that-it-is-part-of-this-mod
 
 https://typescript.programmingpedia.net/en/knowledge-base/39657332/can-t-bind-to-formgroup-since-it-isn-t-a-known-property-of--form---formsmodule--reactiveformsmodule-loaded-
+
+https://www.w3schools.com/tags/att_input_type_reset.asp
+
+https://www.pluralsight.com/guides/building-custom-validators-in-angular
+
+https://www.digitalocean.com/community/tutorials/angular-custom-validation
