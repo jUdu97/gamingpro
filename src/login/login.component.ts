@@ -3,9 +3,11 @@ import {
   ReactiveFormsModule,
   FormGroup,
   FormBuilder,
-  Validators,
   AbstractControl
 } from "@angular/forms";
+import { MatTooltipModule, TooltipPosition} from "@angular/material/tooltip";
+import { MatButtonModule } from "@angular/material/button";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 @Component({
   selector: "login",
@@ -13,24 +15,31 @@ import {
   styleUrls: ["login.component.css"]
 })
 @NgModule({
-  imports: [ReactiveFormsModule]
+  imports: [ReactiveFormsModule,  
+    MatTooltipModule, 
+    MatButtonModule,
+    BrowserAnimationsModule
+  ]
 })
 export class GameLogin implements OnInit {
   gameForm: FormGroup;
   submitted = false;
+  
+ 
 
   constructor(private formBuilder: FormBuilder) {}
 
   ngOnInit() {
     this.gameForm = this.formBuilder.group({
-      username: ["", [ValidateUser]]
+      username: ["", [ValidateUser]],
+      password: ["", [ValidatePass]]
     });
   }
   onSubmit() {
     this.submitted = true;
 
     if (this.gameForm.invalid) {
-      return;
+      return window.alert("Needs input");
     }
     console.log(this.gameForm.value);
   }
@@ -39,6 +48,12 @@ export class GameLogin implements OnInit {
 function ValidateUser(control: AbstractControl): { [key: string]: any } | null {
   if (control.value !== "goship97") {
     return { userValid: true };
+  }
+  return null;
+}
+function ValidatePass(control: AbstractControl): { [key: string]: any } | null {
+  if (control.value !== "coolness") {
+    return { passValid: true };
   }
 
   return null;

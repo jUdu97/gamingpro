@@ -1,24 +1,40 @@
+/* styles.css */
+.custom-tooltip-blue {
+  background-color: #0c6a9e;
+  color: #ffffff;
+}
+
+.reset {
+  background-color: #ffffff;
+  color: #e61c15;
+  margin-right: 20px;
+  margin-left: 90px;
+}
 .login {
   background-color: #e61c15;
   color: #fff;
 }
-.reset {
-  background-color: #ffffff;
-  color: #e61c15;
+.input-warning {
+  color: #ff0f07;
+  font-size: 12px;
 }
+
 label {
   color: #261817;
+  font-size: 20px;
   font-weight: 200;
   font-family: "Manuale", serif;
 }
 .passhelp,
 .namehelp {
   color: #450806;
+  font-size: 20px;
   font-family: "Petrona", serif;
 }
 .passhelp:hover,
 .namehelp:hover {
   font-weight: bold;
+  text-decoration: underline;
 }
 .ng-valid[required],
 .ng-valid.required {

@@ -13,3 +13,7 @@ https://www.w3schools.com/tags/att_input_type_reset.asp
 https://www.pluralsight.com/guides/building-custom-validators-in-angular
 
 https://www.digitalocean.com/community/tutorials/angular-custom-validation
+
+https://www.tutorialspoint.com/angular_material7/angular_material7_tooltip.htm
+
+https://material.angular.io/components/tooltip/overview

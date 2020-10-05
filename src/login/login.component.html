@@ -5,27 +5,57 @@
   (ngSubmit)="onSubmit()"
 >
   <div class="form-group">
-    <label for="username">Username: </label>
+    <label for="username" title="Username">Username: </label>
     <input
       type="text"
       class="form-control required"
       formControlName="username"
       [class.is-invalid]="(gameForm.get('username').touched || gameForm.get('username').dirty)"
     />
-    <span
-      *ngIf="(gameForm.get('username').touched || gameForm.get('username').dirty)"
-      class="invalid-feedback"
+    <p
+      *ngIf="(gameForm.get('username').touched || gameForm.get('username').dirty) && gameForm.get('username').invalid"
+      class="input-warning"
     >
       user required!
-    </span>
-
+    </p>
     <br /><br />
-    <!-- <button type="reset" mat-raised-button class="reset">
-    Reset
-  </button> -->
-    <button type="submit" mat-raised-button class="login">Log In</button>
 
-    <p class="passhelp">Forgot Password?</p>
-    <p class="namehelp">Forget Username?</p>
+    <label for="password" title="Password">Password: </label>
+    <input
+      type="text"
+      class="form-control required"
+      formControlName="password"
+      [class.is-invalid]="(gameForm.get('password').touched || gameForm.get('password').dirty)"
+    />
+    <p
+      *ngIf="(gameForm.get('password').touched || gameForm.get('password').dirty) && gameForm.get('password').invalid"
+      class="input-warning"
+    >
+      password required!
+    </p>
+    <br /><br />
+    <!-- <button type="reset" class="reset" title="Clear fields" mat-raised-button>
+      Reset
+    </button> -->
+    <button mat-raised-button type="submit" class="login">
+      Log In
+    </button>
+
+    <div
+      class="passhelp"
+      matTooltip="Forgot password?"
+      aria-label="Forgot password?"
+      matTooltipHideDelay="10"
+    >
+      Forgot Password?
+    </div>
+    <div
+      class="namehelp"
+      matTooltip="Forgot username?"
+      aria-label="Forgot username?"
+      matTooltipHideDelay="10"
+    >
+      Forget Username?
+    </div>
   </div>
 </form>
