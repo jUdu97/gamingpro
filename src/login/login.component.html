@@ -34,27 +34,18 @@
       password required!
     </p>
     <br /><br />
-    <!-- <button type="reset" class="reset" title="Clear fields" mat-raised-button>
+    <button mat-raised-button type="reset" class="reset" title="Clear fields" >
       Reset
-    </button> -->
-    <button mat-raised-button type="submit" class="login">
+    </button>
+    <button mat-raised-button type="submit" class="login" title="Log in">
       Log In
     </button>
 
-    <div
-      class="passhelp"
-      matTooltip="Forgot password?"
-      aria-label="Forgot password?"
-      matTooltipHideDelay="10"
-    >
+    <div class="passhelp" (click)="openDialog()">
       Forgot Password?
     </div>
-    <div
-      class="namehelp"
-      matTooltip="Forgot username?"
-      aria-label="Forgot username?"
-      matTooltipHideDelay="10"
-    >
+  
+    <div class="namehelp">
       Forget Username?
     </div>
   </div>

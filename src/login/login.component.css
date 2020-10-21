@@ -1,18 +1,23 @@
-/* styles.css */
-.custom-tooltip-blue {
-  background-color: #0c6a9e;
-  color: #ffffff;
+.pass-reset {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
 }
-
 .reset {
   background-color: #ffffff;
   color: #e61c15;
-  margin-right: 20px;
-  margin-left: 90px;
+  position: absolute;
+  top: 0px;
+  left: 30px;
 }
 .login {
   background-color: #e61c15;
   color: #fff;
+  position: absolute;
+  top: 0px;
+  left: 45px;
 }
 .input-warning {
   color: #ff0f07;
@@ -35,6 +40,7 @@ label {
 .namehelp:hover {
   font-weight: bold;
   text-decoration: underline;
+  cursor: pointer;
 }
 .ng-valid[required],
 .ng-valid.required {

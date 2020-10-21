@@ -17,3 +17,15 @@ https://www.digitalocean.com/community/tutorials/angular-custom-validation
 https://www.tutorialspoint.com/angular_material7/angular_material7_tooltip.htm
 
 https://material.angular.io/components/tooltip/overview
+
+https://stackoverflow.com/questions/45777232/customize-angular-material-2-tooltip-styles
+
+https://stackoverflow.com/questions/46990389/angular-4-no-component-factory-found-did-you-add-it-to-ngmodule-entrycomponent
+
+https://stackoverflow.com/questions/59851560/angular-nullinjectorerror-no-provider-for-matdialog
+
+https://blog.angular-university.io/angular-material-dialog/
+
+https://material.angular.io/components/dialog/examples
+
+https://stackblitz.com/edit/mat-dialog-example?file=app%2Fapp.component.ts
