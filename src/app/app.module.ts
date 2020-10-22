@@ -9,13 +9,13 @@ import { AngularMaterialModule } from "./buttons";
 import { MatDialogModule } from "@angular/material/dialog";
 import { MatButtonModule } from "@angular/material/button";
 import { MatTooltipModule } from "@angular/material/tooltip";
-import { GameLogin, PassReset } from "src/login/login.component";
+import { GameLogin } from "src/login/login.component";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
 import "hammerjs";
 
 @NgModule({
-  declarations: [AppComponent, GameLogin, PassReset],
+  declarations: [AppComponent, GameLogin],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -31,7 +31,6 @@ import "hammerjs";
   ],
   exports: [MatFormFieldModule, MatInputModule],
   providers: [],
-  entryComponents: [PassReset],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]
 })

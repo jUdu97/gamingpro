@@ -1,0 +1,27 @@
+<div
+  mat-dialog-content
+  class="user-reset"
+  novalidate
+  *ngIf="userResetForm"
+  [formGroup]="userResetForm"
+>
+  <h1 mat-dialog-title>{{usernameTitle}}</h1>
+  <h3>{{resetInfo}}</h3>
+  <mat-form-field>
+    <input matInput type="text" formControlName="userResetText" required />
+  </mat-form-field>
+  <p>{{successMessage}}</p>
+  <mat-dialog-actions>
+    <button
+      class="sendBtn"
+      mat-stroked-button
+      (click)="sendInfo()"
+      cdkFocusInitial
+    >
+      {{sendButtonText}}
+    </button>
+    <button class="closeBtn" mat-button (click)="onNoClick()">
+      {{closeButtonText}}
+    </button>
+  </mat-dialog-actions>
+</div>

@@ -1,4 +1,5 @@
-.pass-reset {
+.pass-reset,
+.user-reset {
   margin: 0 auto;
   position: absolute;
   left: 0;

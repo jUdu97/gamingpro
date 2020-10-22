@@ -34,18 +34,18 @@
       password required!
     </p>
     <br /><br />
-    <button mat-raised-button type="reset" class="reset" title="Clear fields" >
+    <button mat-raised-button type="reset" class="reset" title="Clear fields">
       Reset
     </button>
     <button mat-raised-button type="submit" class="login" title="Log in">
       Log In
     </button>
 
-    <div class="passhelp" (click)="openDialog()">
+    <div class="passhelp" (click)="openPasswordDialog()">
       Forgot Password?
     </div>
-  
-    <div class="namehelp">
+
+    <div class="namehelp" (click)="openUsernameDialog()">
       Forget Username?
     </div>
   </div>
