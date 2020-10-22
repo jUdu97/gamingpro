@@ -29,3 +29,13 @@ https://blog.angular-university.io/angular-material-dialog/
 https://material.angular.io/components/dialog/examples
 
 https://stackblitz.com/edit/mat-dialog-example?file=app%2Fapp.component.ts
+
+https://stackoverflow.com/questions/46705101/mat-form-field-must-contain-a-matformfieldcontrol
+
+https://stackoverflow.com/questions/41140187/can-not-find-module-angular-material
+
+https://www.w3schools.com/angular/angular_validation.asp
+
+https://material.angular.io/components/dialog/overview
+
+https://www.typescriptlang.org/docs/handbook/functions.html

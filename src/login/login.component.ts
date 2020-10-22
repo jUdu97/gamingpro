@@ -1,4 +1,10 @@
-import { NgModule, Component, OnInit, ViewEncapsulation } from "@angular/core";
+import {
+  NgModule,
+  Component,
+  OnInit,
+  ViewEncapsulation,
+  CUSTOM_ELEMENTS_SCHEMA
+} from "@angular/core";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import {
   ReactiveFormsModule,
@@ -6,9 +12,10 @@ import {
   FormBuilder,
   AbstractControl
 } from "@angular/forms";
+import { MatFormFieldModule } from "@angular/material/form-field";
+import { MatInputModule } from "@angular/material/input";
 import {
   MatDialog,
-  MatDialogConfig,
   MatDialogModule,
   MatDialogRef
 } from "@angular/material/dialog";
@@ -27,8 +34,11 @@ import { MatButtonModule } from "@angular/material/button";
     ReactiveFormsModule,
     MatTooltipModule,
     MatButtonModule,
-    MatDialogModule
-  ]
+    MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class GameLogin implements OnInit {
   gameForm: FormGroup;
@@ -37,21 +47,27 @@ export class GameLogin implements OnInit {
   constructor(private formBuilder: FormBuilder, private dialog: MatDialog) {}
 
   openDialog() {
-    const dialogConfig = new MatDialogConfig();
+    const dialogRef = this.dialog.open(PassReset);
+    dialogRef.afterClosed().subscribe(() => console.log("Dialog box closed"));
+  }
+  ValidateUser(control: AbstractControl): { [key: string]: any } | null {
+    if (control.value !== "goship97") {
+      return { userValid: true };
+    }
+    return null;
+  }
+  ValidatePass(control: AbstractControl): { [key: string]: any } | null {
+    if (control.value !== "coolness") {
+      return { passValid: true };
+    }
 
-    dialogConfig.disableClose = true;
-    dialogConfig.autoFocus = true;
-
-    const dialogRef = this.dialog.open(PassReset, dialogConfig);
-    dialogRef
-      .afterClosed()
-      .subscribe((data) => console.log("Dialog box closed"));
+    return null;
   }
 
   ngOnInit() {
     this.gameForm = this.formBuilder.group({
-      username: ["", [ValidateUser]],
-      password: ["", [ValidatePass]]
+      username: ["", [this.ValidateUser]],
+      password: ["", [this.ValidatePass]]
     });
   }
   onSubmit() {
@@ -63,36 +79,45 @@ export class GameLogin implements OnInit {
     console.log(this.gameForm.value);
   }
 }
-function ValidateUser(control: AbstractControl): { [key: string]: any } | null {
-  if (control.value !== "goship97") {
-    return { userValid: true };
-  }
-  return null;
-}
-function ValidatePass(control: AbstractControl): { [key: string]: any } | null {
-  if (control.value !== "coolness") {
-    return { passValid: true };
-  }
-
-  return null;
-}
 
 @Component({
   selector: "password-reset",
   templateUrl: "password-reset.html",
   styleUrls: ["password-reset.css"]
 })
-export class PassReset {
-  constructor(private dialogRef: MatDialogRef<PassReset>) {}
-
+export class PassReset implements OnInit {
   passwordTitle = "Password Reset";
   resetInfo: string = "Enter username below: ";
   sendButtonText: string = "Send";
   closeButtonText: string = "Close";
   successMessage: string = "";
 
-  sendInfo(successMessage: string) {
-    console.log("Check your email for the password reset.");
+  passResetForm: FormGroup;
+  passResetSubmit = false;
+
+  constructor(
+    private passFormBuilder: FormBuilder,
+    private dialogRef: MatDialogRef<PassReset>
+  ) {}
+
+  ResetPassValidate(control: AbstractControl): { [key: string]: any } | null {
+    if (control.value !== "goship97") {
+      return { resetPassValid: true };
+    }
+    return null;
+  }
+
+  ngOnInit() {
+    this.passResetForm = this.passFormBuilder.group({
+      passResetText: ["", [this.ResetPassValidate]]
+    });
+  }
+  sendInfo() {
+    this.passResetSubmit = true;
+
+    if (this.passResetForm.invalid) {
+      return (this.successMessage = "Email not sent. Try a valid username.");
+    }
     this.successMessage = "Email sent!";
   }
   onNoClick(): void {
