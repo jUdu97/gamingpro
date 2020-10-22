@@ -18,8 +18,8 @@ import { MatDialog, MatDialogModule } from "@angular/material/dialog";
 import { MatTooltipModule } from "@angular/material/tooltip";
 import { MatButtonModule } from "@angular/material/button";
 
-import { PassReset } from "src/login/password-reset";
-import { UserReset } from "src/login/username-reset";
+import { PassReset } from "src/password-reset-dialog/password-reset";
+import { UserReset } from "src/username-reset-dialog/username-reset";
 
 @Component({
   selector: "login",
