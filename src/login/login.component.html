@@ -1,9 +1,10 @@
-<form
-  [formGroup]="gameForm"
-  novalidate
-  *ngIf="gameForm"
-  (ngSubmit)="onSubmit()"
->
+<form [formGroup]="gameForm" novalidate *ngIf="gameForm">
+  <button class="material-icons helpBtn" (click)="openHelpDialog()">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+  <button mat-mini-fab class="gameBtn" (click)="openInfoDialog()">
+    <mat-icon>INFO</mat-icon>
+  </button>
   <div class="form-group">
     <label for="username" title="Username">Username: </label>
     <input
@@ -34,10 +35,21 @@
       password required!
     </p>
     <br /><br />
-    <button mat-raised-button type="reset" class="reset" title="Clear fields">
+    <button
+      mat-raised-button
+      type="reset"
+      class="resetBtn"
+      title="Clear fields"
+    >
       Reset
     </button>
-    <button mat-raised-button type="submit" class="login" title="Log in">
+    <button
+      mat-raised-button
+      type="submit"
+      class="loginBtn"
+      title="Log in"
+      (click)="onSubmit()"
+    >
       Log In
     </button>
 

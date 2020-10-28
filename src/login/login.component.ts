@@ -1,3 +1,4 @@
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import {
   NgModule,
   Component,
@@ -5,7 +6,7 @@ import {
   ViewEncapsulation,
   CUSTOM_ELEMENTS_SCHEMA
 } from "@angular/core";
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+
 import {
   ReactiveFormsModule,
   FormGroup,
@@ -14,12 +15,18 @@ import {
 } from "@angular/forms";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
-import { MatDialog, MatDialogModule } from "@angular/material/dialog";
+import {
+  MatDialog,
+  MatDialogConfig,
+  MatDialogModule
+} from "@angular/material/dialog";
 import { MatTooltipModule } from "@angular/material/tooltip";
 import { MatButtonModule } from "@angular/material/button";
 
 import { PassReset } from "src/password-reset-dialog/password-reset";
 import { UserReset } from "src/username-reset-dialog/username-reset";
+import { GameInfo } from "src/game-info-dialog/game-info";
+import { HelpInfo } from "src/help-info-dialog/help-info";
 
 @Component({
   selector: "login",
@@ -28,7 +35,7 @@ import { UserReset } from "src/username-reset-dialog/username-reset";
   encapsulation: ViewEncapsulation.None
 })
 @NgModule({
-  declarations: [PassReset, UserReset],
+  declarations: [PassReset, UserReset, GameInfo, HelpInfo],
   imports: [
     BrowserAnimationsModule,
     ReactiveFormsModule,
@@ -38,7 +45,7 @@ import { UserReset } from "src/username-reset-dialog/username-reset";
     MatFormFieldModule,
     MatInputModule
   ],
-  entryComponents: [PassReset, UserReset],
+  entryComponents: [PassReset, UserReset, GameInfo, HelpInfo],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class GameLogin implements OnInit {
@@ -48,12 +55,32 @@ export class GameLogin implements OnInit {
   constructor(private formBuilder: FormBuilder, private dialog: MatDialog) {}
 
   openPasswordDialog() {
-    const dialogRef = this.dialog.open(PassReset);
-    dialogRef.afterClosed().subscribe(() => console.log("Dialog box closed"));
+    const dialogPassword = this.dialog.open(PassReset);
+    dialogPassword
+      .afterClosed()
+      .subscribe(() => console.log("Password reset dialog box closed."));
   }
   openUsernameDialog() {
-    const dialogRef = this.dialog.open(UserReset);
-    dialogRef.afterClosed().subscribe(() => console.log("Dialog box closed"));
+    const dialogUsername = this.dialog.open(UserReset);
+    dialogUsername
+      .afterClosed()
+      .subscribe(() => console.log("Username reset dialog box closed."));
+  }
+  openInfoDialog() {
+    const dialogGameInfo = this.dialog.open(GameInfo);
+    dialogGameInfo
+      .afterClosed()
+      .subscribe(() => console.log("Gaming info dialog box closed."));
+  }
+  openHelpDialog() {
+    const helpDialog = new MatDialogConfig();
+    helpDialog.disableClose = true;
+    helpDialog.autoFocus = true;
+    helpDialog.hasBackdrop = false;
+    const dialogHelpInfo = this.dialog.open(HelpInfo, helpDialog);
+    dialogHelpInfo
+      .afterClosed()
+      .subscribe(() => console.log("Help info dialog box closed."));
   }
 
   ValidateUser(control: AbstractControl): { [key: string]: any } | null {
