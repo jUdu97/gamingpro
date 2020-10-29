@@ -1,6 +1,10 @@
 <form [formGroup]="gameForm" novalidate *ngIf="gameForm">
-  <button class="material-icons helpBtn" (click)="openHelpDialog()">
-    <mat-icon>more_vert</mat-icon>
+  <button
+    class="helpBtn material-icons"
+    [disabled]="disableDialog"
+    (click)="openHelpDialog()"
+  >
+    <mat-icon>open_in_new</mat-icon>
   </button>
   <button mat-mini-fab class="gameBtn" (click)="openInfoDialog()">
     <mat-icon>INFO</mat-icon>

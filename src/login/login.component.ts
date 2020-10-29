@@ -15,11 +15,7 @@ import {
 } from "@angular/forms";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
-import {
-  MatDialog,
-  MatDialogConfig,
-  MatDialogModule
-} from "@angular/material/dialog";
+import { MatDialog, MatDialogModule } from "@angular/material/dialog";
 import { MatTooltipModule } from "@angular/material/tooltip";
 import { MatButtonModule } from "@angular/material/button";
 
@@ -51,6 +47,7 @@ import { HelpInfo } from "src/help-info-dialog/help-info";
 export class GameLogin implements OnInit {
   gameForm: FormGroup;
   submitted = false;
+  disableDialog: boolean = false;
 
   constructor(private formBuilder: FormBuilder, private dialog: MatDialog) {}
 
@@ -68,19 +65,13 @@ export class GameLogin implements OnInit {
   }
   openInfoDialog() {
     const dialogGameInfo = this.dialog.open(GameInfo);
-    dialogGameInfo
-      .afterClosed()
-      .subscribe(() => console.log("Gaming info dialog box closed."));
+    this.disableDialog = !this.disableDialog;
+    dialogGameInfo.afterClosed().subscribe(() => (this.disableDialog = false));
   }
   openHelpDialog() {
-    const helpDialog = new MatDialogConfig();
-    helpDialog.disableClose = true;
-    helpDialog.autoFocus = true;
-    helpDialog.hasBackdrop = false;
-    const dialogHelpInfo = this.dialog.open(HelpInfo, helpDialog);
-    dialogHelpInfo
-      .afterClosed()
-      .subscribe(() => console.log("Help info dialog box closed."));
+    const dialogHelpInfo = this.dialog.open(HelpInfo);
+    this.disableDialog = !this.disableDialog;
+    dialogHelpInfo.afterClosed().subscribe(() => (this.disableDialog = false));
   }
 
   ValidateUser(control: AbstractControl): { [key: string]: any } | null {
@@ -93,7 +84,6 @@ export class GameLogin implements OnInit {
     if (control.value !== "coolness") {
       return { passValid: true };
     }
-
     return null;
   }
 

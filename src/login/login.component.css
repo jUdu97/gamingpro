@@ -14,11 +14,12 @@
   left: 250px;
 }
 .helpBtn {
+  cursor: pointer;
   border: 0;
   color: #ffffff;
   background-color: #2b012b;
   position: relative;
-  top: 0;
+  top: 300px;
   right: 250px;
 }
 .resetBtn {

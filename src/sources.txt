@@ -43,3 +43,11 @@ https://www.typescriptlang.org/docs/handbook/functions.html
 https://stackoverflow.com/questions/49796212/angular-material-icons-not-working
 
 https://stackoverflow.com/questions/2922909/should-i-use-border-none-or-border-0
+
+https://stackoverflow.com/questions/38292232/how-to-select-element-by-class-name-in-typescript
+
+https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/disabled
+
+https://stackoverflow.com/questions/45011392/angular-disable-button-after-click?rq=1
+
+https://www.netjstech.com/2020/04/angular-disable-button-example.html#DisableButtonAfterClick
