@@ -30,11 +30,15 @@
   left: 30px;
 }
 .loginBtn {
-  background-color: #e61c15;
+  background-color: #580604;
   color: #fff;
   position: absolute;
   top: 0px;
   left: 45px;
+}
+.reset_info {
+  margin-top: 20px;
+  margin-left: 70px;
 }
 .input-warning {
   color: #ff0f07;
@@ -49,7 +53,7 @@ label {
 }
 .passhelp,
 .namehelp {
-  color: #450806;
+  color: #521210;
   font-size: 20px;
   font-family: "Petrona", serif;
 }
@@ -65,5 +69,7 @@ label {
 }
 
 .ng-invalid:not(form) {
-  border-left: 7px solid #a94442;
+  border-left: 7px solid #c51815;
 }
+
+

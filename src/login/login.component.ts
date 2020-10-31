@@ -53,15 +53,13 @@ export class GameLogin implements OnInit {
 
   openPasswordDialog() {
     const dialogPassword = this.dialog.open(PassReset);
-    dialogPassword
-      .afterClosed()
-      .subscribe(() => console.log("Password reset dialog box closed."));
+    this.disableDialog = !this.disableDialog;
+    dialogPassword.afterClosed().subscribe(() => (this.disableDialog = false));
   }
   openUsernameDialog() {
     const dialogUsername = this.dialog.open(UserReset);
-    dialogUsername
-      .afterClosed()
-      .subscribe(() => console.log("Username reset dialog box closed."));
+    this.disableDialog = !this.disableDialog;
+    dialogUsername.afterClosed().subscribe(() => (this.disableDialog = false));
   }
   openInfoDialog() {
     const dialogGameInfo = this.dialog.open(GameInfo);
