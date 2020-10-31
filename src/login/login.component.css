@@ -11,7 +11,7 @@
   font-size: 10px;
   position: relative;
   top: 0;
-  left: 250px;
+  left: 175px;
 }
 .helpBtn {
   cursor: pointer;
@@ -20,7 +20,7 @@
   background-color: #2b012b;
   position: relative;
   top: 300px;
-  right: 250px;
+  right: 175px;
 }
 .resetBtn {
   background-color: #ffffff;
@@ -72,4 +72,66 @@ label {
   border-left: 7px solid #c51815;
 }
 
-
+@media (min-width: 525px){
+  label {
+    font-size: 22px;
+  }
+  .resetBtn, .loginBtn {
+    font-size: 16px;
+  }
+  .gameBtn {
+    top: 0;
+    left: 200px;
+  }
+  .helpBtn {
+    top: 300px;
+    right: 200px;
+  }
+}
+@media (min-width: 750px){
+  label, .passhelp,
+  .namehelp {
+    font-size: 24px;
+  }
+  .resetBtn, .loginBtn {
+    font-size: 18px;
+  }
+  .gameBtn {
+    top: 0;
+    left: 225px;
+  }
+  .helpBtn {
+    top: 300px;
+    right: 350px;
+  }
+}
+@media (min-width: 950px){
+  label, .passhelp,
+  .namehelp {
+    font-size: 26px;
+  }
+  .resetBtn, .loginBtn {
+    font-size: 20px;
+  }
+  .gameBtn {
+    top: 0;
+    left: 550px;
+  }
+  .helpBtn {
+    top: 450px;
+    right: 350px;
+  }
+}
+@media (min-width: 1200px){
+  label, .passhelp,
+  .namehelp {
+    font-size: 28px;
+  }
+  .resetBtn, .loginBtn {
+    font-size: 22px;
+  }
+  .helpBtn {
+    top: 480px;
+    right: 625px;
+  }
+}

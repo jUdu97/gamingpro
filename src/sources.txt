@@ -51,3 +51,7 @@ https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/disabled
 https://stackoverflow.com/questions/45011392/angular-disable-button-after-click?rq=1
 
 https://www.netjstech.com/2020/04/angular-disable-button-example.html#DisableButtonAfterClick
+
+https://www.w3schools.com/css/css_rwd_viewport.asp
+
+https://www.w3schools.com/css/css_rwd_mediaqueries.asp
