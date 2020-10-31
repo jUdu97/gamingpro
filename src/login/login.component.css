@@ -76,7 +76,7 @@ label {
   label {
     font-size: 22px;
   }
-  .resetBtn, .loginBtn {
+  .resetBtn, .loginBtn, .input-warning {
     font-size: 16px;
   }
   .gameBtn {
@@ -93,7 +93,7 @@ label {
   .namehelp {
     font-size: 24px;
   }
-  .resetBtn, .loginBtn {
+  .resetBtn, .loginBtn, .input-warning {
     font-size: 18px;
   }
   .gameBtn {
@@ -110,7 +110,7 @@ label {
   .namehelp {
     font-size: 26px;
   }
-  .resetBtn, .loginBtn {
+  .resetBtn, .loginBtn, .input-warning {
     font-size: 20px;
   }
   .gameBtn {
@@ -127,7 +127,7 @@ label {
   .namehelp {
     font-size: 28px;
   }
-  .resetBtn, .loginBtn {
+  .resetBtn, .loginBtn, .input-warning {
     font-size: 22px;
   }
   .helpBtn {
