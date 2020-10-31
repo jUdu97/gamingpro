@@ -1,0 +1,37 @@
+.success-dialog {
+  position: absolute;
+  top: 70px;
+  left: 250px;
+  right: 250px;
+  color: #ffffff;
+  border: 2px solid #0f0e0e;
+  background-color: #024402f8;
+  width: 300px;
+  height: 200px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.mat-dialog-title,
+.mat-dialog-actions,
+.mat-dialog-content {
+  margin: 0 auto;
+  text-align: center;
+}
+.mat-dialog-title {
+  margin-top: 10px;
+  font-size: 26px;
+}
+.mat-dialog-content {
+  display: block;
+  
+}
+.mat-dialog-actions {
+  position: relative;
+  top: 10px;
+  bottom: 130px;
+}
+.closeBtn {
+  background-color: #ffffffbb;
+  color: #023802e7;
+  margin: 0 auto;
+}

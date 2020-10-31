@@ -23,6 +23,7 @@ import { PassReset } from "src/password-reset-dialog/password-reset";
 import { UserReset } from "src/username-reset-dialog/username-reset";
 import { GameInfo } from "src/game-info-dialog/game-info";
 import { HelpInfo } from "src/help-info-dialog/help-info";
+import {SuccessMessage} from "src/success-dialog/success-dialog.component";
 
 @Component({
   selector: "login",
@@ -31,7 +32,7 @@ import { HelpInfo } from "src/help-info-dialog/help-info";
   encapsulation: ViewEncapsulation.None
 })
 @NgModule({
-  declarations: [PassReset, UserReset, GameInfo, HelpInfo],
+  declarations: [PassReset, UserReset, GameInfo, HelpInfo, SuccessMessage],
   imports: [
     BrowserAnimationsModule,
     ReactiveFormsModule,
@@ -41,7 +42,7 @@ import { HelpInfo } from "src/help-info-dialog/help-info";
     MatFormFieldModule,
     MatInputModule
   ],
-  entryComponents: [PassReset, UserReset, GameInfo, HelpInfo],
+  entryComponents: [PassReset, UserReset, GameInfo, HelpInfo, SuccessMessage],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class GameLogin implements OnInit {
@@ -71,6 +72,11 @@ export class GameLogin implements OnInit {
     this.disableDialog = !this.disableDialog;
     dialogHelpInfo.afterClosed().subscribe(() => (this.disableDialog = false));
   }
+  showSuccessMessage() {
+    const dialogSuccess = this.dialog.open(SuccessMessage);
+    this.disableDialog = !this.disableDialog;
+    dialogSuccess.afterClosed().subscribe(() => (this.disableDialog = false));
+  }
 
   ValidateUser(control: AbstractControl): { [key: string]: any } | null {
     if (control.value !== "goship97") {
@@ -97,6 +103,6 @@ export class GameLogin implements OnInit {
     if (this.gameForm.invalid) {
       return window.alert("Needs valid input");
     }
-    console.log(this.gameForm.value);
+    this.showSuccessMessage();
   }
 }

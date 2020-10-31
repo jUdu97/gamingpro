@@ -2,11 +2,16 @@
   position: absolute;
   top: 50px;
   left: 50px;
-  color: #ffffff;
+  color: #000000;
   border: 2px solid #1d1b1b;
-  background-color: #501450;
+  background-color: #781eb4;
   width: 450px;
   height: 700px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+.mat-dialog-title {
+  margin-top: 10px;
+  font-size: 26px;
 }
 .section-title {
   font-size: 22px;
