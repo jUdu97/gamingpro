@@ -6,5 +6,6 @@ import { Component } from "@angular/core";
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
-  title = "CodeSandbox";
+  compName = "GamerPro 2086";
+  describeGame = "Pro Gamer";
 }

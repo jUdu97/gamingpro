@@ -1,0 +1,35 @@
+.user-reset {
+  position: absolute;
+  top: 150px;
+  border: 2px solid #1d1b1b;
+  background-color: #7a2626;
+  width: 325px;
+  height: 225px;
+}
+.mat-dialog-title,
+.mat-dialog-actions,
+.mat-dialog-content {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.mat-dialog-actions {
+  position: absolute;
+  bottom: 10px;
+}
+.mat-form-field {
+  display: block;
+}
+
+input {
+  background: #ffffff;
+}
+
+.sendBtn {
+  background-color: #e61c15;
+  color: #ffffffbb;
+}
+.closeBtn {
+  background-color: #ffffffbb;
+  color: #e61c15;
+}

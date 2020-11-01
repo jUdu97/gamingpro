@@ -1,0 +1,48 @@
+<div mat-dialog-content class="help-info">
+  <h1 mat-dialog-title>{{helpTitle}}</h1>
+  <h2 class="section-title">Prerequisites</h2>
+  <p>Must have game run on one of the following browsers:</p>
+  <ul>
+    <li>Platinom</li>
+    <li>Waterwall</li>
+    <li>Greenbull</li>
+  </ul>
+  <h2 class="section-title">How To Play</h2>
+  <p>[A] - Move left</p>
+  <p>[W] - Move forward</p>
+  <p>[S] - Move backward</p>
+  <p>[D] - Move right</p>
+  <p>[M] - Use attack</p>
+  <p>[B] - Use block</p>
+  <p>[O] - Switch weapons</p>
+  <p>[T] - Talk in chat</p>
+  <p>[SPACEBAR] - Jump</p>
+  <h2 class="section-title">Questions</h2>
+  <h3 class="sub-heading">How do I regain progress after disconnect?</h3>
+  <p>
+    If the network disconnects or an in-game error occurs, progress is stored
+    from the last save point.
+  </p>
+  <h3 class="sub-heading">Can I switch characters mid-tournament?</h3>
+  <p>
+    Character switching is allowed, but limited to 3 chagnes per tournament.
+    Unlimited character switching per game session.
+  </p>
+  <h3 class="sub-heading">Why is there lag?</h3>
+  <p>
+    Should ghosting or glitching of any kind occur, please contact our support
+    team and they will alert the development team of such inquiries. Use
+    <b>{{contactEmail}}</b> to reach the support team.
+  </p>
+  <h3 class="sub-heading">When should updates be expected?</h3>
+  <p>
+    Monthly updates at the latest. New versions of the game occur every two
+    weeks. For further questions, contact the support team at
+    <b>{{contactEmail}}</b>.
+  </p>
+  <mat-dialog-actions>
+    <button class="closeBtn" mat-button (click)="onNoClick()">
+      {{closeButtonText}}
+    </button>
+  </mat-dialog-actions>
+</div>

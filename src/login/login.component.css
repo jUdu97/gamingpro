@@ -1,0 +1,165 @@
+.pass-reset,
+.user-reset {
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+.gameBtn {
+  color: #ffffff;
+  background-color: #858585;
+  font-size: 10px;
+  position: relative;
+  top: 0;
+  left: 175px;
+}
+.helpBtn {
+  cursor: pointer;
+  border: 0;
+  color: #ffffff;
+  background-color: #2b012b;
+  position: relative;
+  top: 300px;
+  right: 175px;
+}
+.resetBtn {
+  background-color: #ffffff;
+  color: #e61c15;
+  position: absolute;
+  top: 0px;
+  left: 30px;
+}
+.loginBtn {
+  background-color: #580604;
+  color: #fff;
+  position: absolute;
+  top: 0px;
+  left: 45px;
+}
+.reset_info {
+  margin-top: 20px;
+  margin-left: 70px;
+}
+.input-warning {
+  color: #ff0f07;
+  font-size: 12px;
+}
+.correct_info {
+  color: #1a8a20;
+  text-decoration: underline;
+  font-weight: bolder;
+  font-size: 16px;
+}
+label {
+  color: #261817;
+  font-size: 20px;
+  font-weight: 200;
+  font-family: "Manuale", serif;
+}
+.passhelp,
+.namehelp {
+  color: #521210;
+  font-size: 20px;
+  font-family: "Petrona", serif;
+}
+.passhelp:hover,
+.namehelp:hover {
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.ng-valid[required],
+.ng-valid.required {
+  border-left: 7px solid #42a948;
+}
+
+.ng-invalid:not(form) {
+  border-left: 7px solid #c51815;
+}
+
+@media (min-width: 525px) {
+  label {
+    font-size: 22px;
+  }
+  .resetBtn,
+  .loginBtn,
+  .input-warning {
+    font-size: 16px;
+  }
+  .correct_info {
+    font-size: 18px;
+  }
+  .gameBtn {
+    top: 0;
+    left: 200px;
+  }
+  .helpBtn {
+    top: 300px;
+    right: 200px;
+  }
+}
+@media (min-width: 750px) {
+  label,
+  .passhelp,
+  .namehelp {
+    font-size: 24px;
+  }
+  .resetBtn,
+  .loginBtn,
+  .input-warning {
+    font-size: 18px;
+  }
+  .correct_info {
+    font-size: 20px;
+  }
+  .gameBtn {
+    top: 0;
+    left: 225px;
+  }
+  .helpBtn {
+    top: 300px;
+    right: 350px;
+  }
+}
+@media (min-width: 950px) {
+  label,
+  .passhelp,
+  .namehelp {
+    font-size: 26px;
+  }
+  .resetBtn,
+  .loginBtn,
+  .input-warning {
+    font-size: 20px;
+  }
+  .correct_info {
+    font-size: 22px;
+  }
+  .gameBtn {
+    top: 0;
+    left: 550px;
+  }
+  .helpBtn {
+    top: 450px;
+    right: 350px;
+  }
+}
+@media (min-width: 1200px) {
+  label,
+  .passhelp,
+  .namehelp {
+    font-size: 28px;
+  }
+  .resetBtn,
+  .loginBtn,
+  .input-warning {
+    font-size: 22px;
+  }
+  .correct_info {
+    font-size: 24px;
+  }
+  .helpBtn {
+    top: 480px;
+    right: 625px;
+  }
+}

@@ -1,0 +1,70 @@
+<form [formGroup]="gameForm" novalidate *ngIf="gameForm">
+  <button
+    class="helpBtn material-icons"
+    [disabled]="disableDialog"
+    (click)="openHelpDialog()"
+  >
+    <mat-icon>open_in_new</mat-icon>
+  </button>
+  <button mat-mini-fab class="gameBtn" (click)="openInfoDialog()">
+    <mat-icon>INFO</mat-icon>
+  </button>
+  <div class="form-group">
+    <p class="correct_info">Username: goship97</p>
+    <label for="username" title="Username">Username: </label>
+    <input
+      type="text"
+      class="form-control required"
+      formControlName="username"
+      [class.is-invalid]="(gameForm.get('username').touched || gameForm.get('username').dirty)"
+    />
+    <p
+      *ngIf="(gameForm.get('username').touched || gameForm.get('username').dirty) && gameForm.get('username').invalid"
+      class="input-warning"
+    >
+      user required!
+    </p>
+    <br /><br />
+    <p class="correct_info">Password: coolness</p>
+    <label for="password" title="Password">Password: </label>
+    <input
+      type="text"
+      class="form-control required"
+      formControlName="password"
+      [class.is-invalid]="(gameForm.get('password').touched || gameForm.get('password').dirty)"
+    />
+    <p
+      *ngIf="(gameForm.get('password').touched || gameForm.get('password').dirty) && gameForm.get('password').invalid"
+      class="input-warning"
+    >
+      password required!
+    </p>
+    <br /><br />
+    <button
+      mat-raised-button
+      type="reset"
+      class="resetBtn"
+      title="Clear fields"
+    >
+      Reset
+    </button>
+    <button
+      mat-raised-button
+      type="submit"
+      class="loginBtn"
+      title="Log in"
+      (click)="onSubmit()"
+    >
+      Log In
+    </button>
+    <div class="reset_info">
+      <div class="passhelp" (click)="openPasswordDialog()">
+        Forgot Password?
+      </div>
+
+      <div class="namehelp" (click)="openUsernameDialog()">
+        Forget Username?
+      </div>
+    </div>
+  </div>
+</form>
