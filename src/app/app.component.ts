@@ -6,6 +6,6 @@ import { Component } from "@angular/core";
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
-  compName = "GamerPro 2086 Online";
+  compName = "GamerPro 2086";
   describeGame = "Pro Gamer";
 }
